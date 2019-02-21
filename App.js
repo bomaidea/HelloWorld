@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 class Greeting extends Component {
 	render() {
@@ -11,7 +11,7 @@ class Greeting extends Component {
 	}
 }
 
-export default class LotsOfGreetings extends Component {
+export default class App extends Component {
 	render() {
 		return (
 			<View style={{alignItems: 'center'}}>
@@ -35,6 +35,3 @@ const styles = StyleSheet.create({
 		height: 387,
 	},
 });
-
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('HelloWorld', () => LotsOfGreetings);
