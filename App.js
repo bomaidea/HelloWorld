@@ -4,12 +4,12 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 export default class App extends React.Component {
 	render() {
 		let pic = {
-			uri: 'http://giuliobosco.ch/i.jpg'
+			uri: 'http://giuliobosco.ch/today.jpg'
 		};
 		return (
 			<View style={styles.container}>
 				<Text>Matteo Bosco's APP!</Text>
-				<Image source={pic} style={{width:217, height: 387}}/>
+				<Image source={pic} style={styles.img}/>
 			</View>
 		);
 	}
@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-	/*image: {
+	img: {
 		width: 217,
 		height: 387,
-	},*/
+	},
 });
