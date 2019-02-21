@@ -1,15 +1,23 @@
-import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-export default class App extends React.Component {
+class Greeting extends Component {
 	render() {
-		let pic = {
-			uri: 'http://giuliobosco.ch/today.jpg'
-		};
 		return (
-			<View style={styles.container}>
-				<Text>Matteo Bosco's APP!</Text>
-				<Image source={pic} style={styles.img}/>
+			<View style={{alignItems: 'center'}}>
+				<Text>Hello {this.props.name}!</Text>
+			</View>
+		);
+	}
+}
+
+export default class LotsOfGreetings extends Component {
+	render() {
+		return (
+			<View style={{alignItems: 'center'}}>
+				<Greeting name='Rexxar' />
+				<Greeting name='Jaina' />
+				<Greeting name='Valeera' />
 			</View>
 		);
 	}
@@ -27,3 +35,6 @@ const styles = StyleSheet.create({
 		height: 387,
 	},
 });
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('HelloWorld', () => LotsOfGreetings);
