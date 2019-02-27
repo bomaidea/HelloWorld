@@ -20,6 +20,7 @@ export default class App extends Component {
 		const { status } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
 		if (status !== 'granted') {
 			console.log(status) ;
+			alert(status);
 			return;
 		}
 		let token = await Notifications.getExpoPushTokenAsync();
@@ -92,8 +93,8 @@ export default class App extends Component {
 	}
 }
 
-const PUSH_REGISTRATION_ENDPOINT = 'http://71f549cc.ngrok.io/token';
-const MESSAGE_ENPOINT = 'http://71f549cc.ngrok.io/message';
+const PUSH_REGISTRATION_ENDPOINT = 'http://c174239b.ngrok.io/token';
+const MESSAGE_ENPOINT = 'http://c174239b.ngrok.io/message';
 
 const styles = StyleSheet.create({
 	container: {
